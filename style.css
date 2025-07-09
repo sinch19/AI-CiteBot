@@ -1,0 +1,307 @@
+/* style.css - Retro Techno Futuristic Theme v6.4 (Matching Ask Maira style to Analyze Topic) */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* --- Base & Body --- */
+.stApp {
+    background-color: #050a1a; /* Dark blue-black */
+    /* Square Grid Background */
+    background-image:
+        linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px), /* Horizontal lines */
+        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px); /* Vertical lines */
+    background-size: 20px 20px; /* Grid size */
+    font-family: 'Roboto Mono', monospace; /* Monospaced font */
+    color: #e0e0e0; /* Light grey text */
+}
+
+/* --- Title --- */
+.title {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 3.5rem !important;
+    font-weight: 700;
+    color: #00ffff; /* Cyan */
+    padding: 50px 10px 40px 10px;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #ff00ff; /* Cyan/Magenta glow */
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* --- Form --- MODIFIED Background --- */
+form {
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    background-color: rgba(25, 25, 50, 0.9); /* Slightly different shade and more opaque */
+    padding: 30px 35px 35px 35px;
+    border-radius: 0px; /* Sharp corners */
+    border: 2px solid #00ffff; /* Thicker Cyan border */
+    box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.4), 0 0 10px rgba(0, 255, 255, 0.2); /* Inner and subtle outer glow */
+}
+
+/* Input styling */
+div[data-testid="stTextInput"] label {
+    color: #ff00ff !important; /* Magenta labels */
+    font-weight: 700;
+    padding-bottom: 8px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+div[data-testid="stTextInput"] input {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* Black input bg */
+    color: #00ff00 !important; /* Green input text */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem !important;
+    padding: 18px;
+    border-radius: 0px; /* Sharp corners */
+    border: 1px solid #ff00ff; /* Magenta border */
+    box-shadow: none;
+}
+div[data-testid="stTextInput"] input:focus {
+    border: 1px solid #00ff00 !important; /* Green border on focus */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green glow on focus */
+}
+
+/* --- Main Submit Button ("Analyze Topic") --- */
+div.stForm [data-testid="stFormSubmitButton"] {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+div.stForm [data-testid="stFormSubmitButton"] button {
+    /* These are the styles we will copy */
+    background: linear-gradient(135deg, #00ffff, #ff00ff); /* Cyan to Magenta gradient */
+    color: #050a1a !important; /* Dark text */
+    padding: 15px 40px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 0px; /* Sharp corners */
+    border: 2px solid #00ff00; /* Green border */
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+div.stForm [data-testid="stFormSubmitButton"] button:hover {
+    background: linear-gradient(135deg, #ff00ff, #00ffff); /* Reverse gradient */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 10px rgba(255, 0, 255, 0.5);
+    transform: scale(1.05);
+    border: 2px solid #00ffff;
+}
+div.stForm [data-testid="stFormSubmitButton"] button:active {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+/* --- Follow-up Q&A Section Styles --- */
+/* Style the text area label */
+div[data-testid="stTextArea"] label {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #00ffff !important; /* Cyan label */
+    font-family: 'Orbitron', sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+/* Style the text area itself */
+div[data-testid="stTextArea"] textarea {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #ff00ff !important; /* Magenta border */
+    border-radius: 0px !important;
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 1rem !important;
+}
+div[data-testid="stTextArea"] textarea:focus {
+     border-color: #00ff00 !important; /* Green focus border */
+     box-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+}
+
+/* Style the "Ask Maira" button - Copied styles from "Analyze Topic" --- */
+.stApp .results-container button { /* Using the high specificity selector */
+    /* --- Copied Styles Start --- */
+    background: linear-gradient(135deg, #00ffff, #ff00ff) !important; /* Cyan to Magenta gradient */
+    color: #050a1a !important; /* Dark text */
+    padding: 15px 40px !important; /* Make sure padding matches */
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1.2rem !important; /* Make sure font-size matches */
+    font-weight: 700 !important;
+    border-radius: 0px !important; /* Sharp corners */
+    border: 2px solid #00ff00 !important; /* Green border */
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    /* --- Copied Styles End --- */
+    margin-top: 15px !important; /* Keep a small margin */
+    display: inline-block !important; /* Ensure padding applies correctly */
+    width: auto !important; /* Allow button to size naturally */
+}
+.stApp .results-container button:hover { /* Using the high specificity selector */
+    /* --- Copied Hover Styles Start --- */
+    background: linear-gradient(135deg, #ff00ff, #00ffff) !important; /* Reverse gradient */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 10px rgba(255, 0, 255, 0.5) !important;
+    transform: scale(1.05);
+    border: 2px solid #00ffff !important;
+    /* --- Copied Hover Styles End --- */
+}
+.stApp .results-container button:active { /* Using the high specificity selector */
+    /* --- Copied Active Styles Start --- */
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5) !important;
+    /* --- Copied Active Styles End --- */
+}
+
+/* Style the Answer Box */
+.results-container div[data-testid="stInfo"] { /* Targets st.info for the answer */
+    background-color: rgba(0, 255, 0, 0.1) !important; /* Faint green background */
+    border-left: 4px solid #00ff00 !important; /* Green left border */
+    border-radius: 0px !important;
+    padding: 15px 20px !important;
+}
+.results-container div[data-testid="stInfo"] .element-container {
+    color: #e0e0e0 !important; /* Ensure text color contrasts */
+}
+
+
+/* --- Results Area --- */
+/* (Rest of the CSS remains unchanged) */
+.results-container {
+    color: #e0e0e0 !important;
+    padding: 10px 35px 30px 35px;
+    border-radius: 0px;
+    max-width: 850px;
+    margin: 10px auto 40px auto;
+}
+.results-container div[data-testid="stMarkdownContainer"] * {
+    background: transparent !important;
+    color: inherit !important;
+    font-family: 'Roboto Mono', monospace !important;
+}
+.results-container h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff !important;
+    border-bottom: 1px solid #00ffff !important;
+    padding-bottom: 8px !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 3px #00ffff;
+}
+.results-container h3:first-child { margin-top: 0 !important; }
+.results-container p, .results-container li {
+    line-height: 1.8 !important;
+    margin-bottom: 15px !important;
+    font-size: 1.05rem !important;
+    color: #c0c0c0 !important;
+}
+.results-container strong {
+    color: #00ff00 !important;
+    font-weight: 700 !important;
+}
+.results-container a {
+    color: #00ff00 !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    border-bottom: 1px dashed #00ff00;
+    transition: all 0.2s ease;
+}
+.results-container a:hover {
+    color: #00ffff !important;
+    border-bottom: 1px solid #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+.results-container ul, .results-container ol {
+    list-style-position: outside !important;
+    padding-left: 30px !important;
+}
+.results-container ul {list-style-type: square !important;}
+.results-container ol {list-style-type: decimal !important;}
+
+.results-container li::marker {
+    color: #ff00ff !important; /* Magenta bullets/numbers */
+}
+.results-container .summary-box,
+.results-container .reason-box,
+.results-container .shortlist-box,
+.results-container .topics-box {
+    background-color: rgba(0, 255, 255, 0.05) !important;
+    border-left: 5px solid #ff00ff !important;
+    padding: 20px 25px !important;
+    margin-top: 25px !important;
+    border-radius: 0px !important;
+    border-right: 1px solid rgba(255, 0, 255, 0.3);
+    border-top: 1px solid rgba(255, 0, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 0, 255, 0.3);
+}
+.results-container .reason-box p,
+.results-container .summary-box p,
+.results-container .topics-box li,
+.results-container .shortlist-box li {
+    color: #e0e0e0 !important;
+}
+.results-container .summary-box strong:first-child,
+.results-container .reason-box strong:first-child,
+.results-container .shortlist-box strong:first-child,
+.results-container .topics-box strong:first-child {
+    color: #ff00ff !important;
+    display: block !important;
+    margin-bottom: 15px !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.results-container .topics-box strong {
+    color: #00ff00 !important;
+}
+
+/* --- Download Button --- (Style remains even if button isn't used) */
+.summary-box div[data-testid="stDownloadButton"] { margin-top: 25px; text-align: left; }
+.summary-box div[data-testid="stDownloadButton"] button {
+    background-color: #00ff00 !important; color: #050a1a !important;
+    border: 1px solid #e0e0e0 !important; border-radius: 0px !important;
+    padding: 10px 20px !important; font-weight: 700 !important;
+    margin-top: 15px !important; transition: all 0.2s ease !important;
+    font-family: 'Roboto Mono', monospace; text-transform: uppercase;
+}
+.summary-box div[data-testid="stDownloadButton"] button:hover {
+    background-color: #050a1a !important; color: #00ff00 !important;
+    border: 1px solid #00ff00 !important; box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center; padding: 40px 20px; margin-top: 60px;
+    color: #888; font-size: 0.9rem;
+    border-top: 1px dashed rgba(0, 255, 255, 0.2);
+}
+
+/* --- Warnings/Errors --- */
+div[data-testid="stAlert"] {
+    border-radius: 0px !important; border-left-width: 5px !important;
+    font-family: 'Roboto Mono', monospace !important;
+}
+div[data-testid="stAlert"][kind="warning"] {
+    border-left-color: #ff00ff !important; background-color: rgba(255, 0, 255, 0.1) !important;
+    color: #ff00ff !important;
+}
+div[data-testid="stAlert"][kind="error"] {
+    border-left-color: #ff4136 !important; background-color: rgba(255, 65, 54, 0.1) !important;
+    color: #ff4136 !important;
+}
+div[data-testid="stAlert"][kind="info"] {
+     border-left-color: #00ffff !important; background-color: rgba(0, 255, 255, 0.1) !important;
+     color: #00ffff !important;
+}
+
+/* --- Misc --- */
+div[data-testid="stSessionState"] * { background: transparent !important; color: inherit !important; }
